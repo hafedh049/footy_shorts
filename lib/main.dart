@@ -1,5 +1,6 @@
 import 'package:adaptive_theme/adaptive_theme.dart';
 import 'package:flutter/material.dart';
+import 'package:footy_shorts/utils/globals.dart';
 import 'package:footy_shorts/utils/methods.dart';
 import 'package:get/get.dart';
 
@@ -15,6 +16,7 @@ class Main extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AdaptiveTheme(
+      initial: userLocalSettings!.get('') AdaptiveThemeMode.dark,
       builder: (ThemeData light, ThemeData dark) {
         return GetMaterialApp(
           debugShowCheckedModeBanner: false,
