@@ -3,7 +3,7 @@ import 'package:footy_shorts/utils/globals.dart';
 
 ThemeData lightTheme = ThemeData(
   brightness: Brightness.light,
-  primaryColor: Colors.tealAccent,
-  hintColor: Colors.tealAccent,
+  primaryColor: blue,
+  hintColor: blue,
   scaffoldBackgroundColor: white,
 );
