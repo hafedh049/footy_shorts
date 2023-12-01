@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:footy_shorts/views/reservation.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -9,6 +10,11 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   final PageController _screensController = PageController();
+
+  final Map<int, Widget> _screens = <int, Widget>{
+    0: const Resersvation(),
+  };
+
   @override
   void dispose() {
     _screensController.dispose();
