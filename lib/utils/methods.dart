@@ -3,7 +3,7 @@ import 'package:hive/hive.dart';
 
 Future<bool> loadUserLocalSettings() async {
   try {
-    userLocalSettings = await Hive.openBox('name');
+    userLocalSettings = await Hive.openBox('userLocalSettings');
     return true;
   } catch (e) {
     return false;
