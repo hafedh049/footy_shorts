@@ -41,6 +41,7 @@ dependencies:
   lottie: ^2.7.0
   adaptive_theme: ^3.4.1
   icons_plus: ^4.0.0
+  get: ^4.6.6
 
 dev_dependencies:
   flutter_test:
