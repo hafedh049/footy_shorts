@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:footy_shorts/views/highlight.dart';
 import 'package:footy_shorts/views/reservation.dart';
 
 class Home extends StatefulWidget {
@@ -13,6 +14,7 @@ class _HomeState extends State<Home> {
 
   final Map<int, Widget> _screens = <int, Widget>{
     0: const Resersvation(),
+    1: VideoHighlight(),
   };
 
   @override
