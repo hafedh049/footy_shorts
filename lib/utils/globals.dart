@@ -7,4 +7,4 @@ const Color gray = Color.fromARGB(255, 51, 56, 66);
 const Color white = Colors.white;
 
 //VARS
-Box? userSettings;
+Box? userLocalSettings;
