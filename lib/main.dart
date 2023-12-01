@@ -22,7 +22,7 @@ class Main extends StatelessWidget {
       dark: darkTheme,
       light: lightTheme,
       builder: (ThemeData light, ThemeData dark) {
-        return GetMaterialApp(
+        return GetMaterialApp(theme: ,
           debugShowCheckedModeBanner: false,
         );
       },
