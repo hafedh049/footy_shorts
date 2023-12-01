@@ -14,7 +14,7 @@ class _HomeState extends State<Home> {
 
   final Map<int, Widget> _screens = <int, Widget>{
     0: const Resersvation(),
-    1: VideoHighlight(),
+    1: const VideoHighlight(),
   };
 
   @override
@@ -29,7 +29,7 @@ class _HomeState extends State<Home> {
       body: PageView.builder(
         onPageChanged: (int index) {},
         itemCount: 3,
-        itemBuilder: (BuildContext context, int index) {},
+        itemBuilder: (BuildContext context, int index) =>,
       ),
     );
   }
