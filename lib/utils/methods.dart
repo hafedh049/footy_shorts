@@ -1,6 +1,7 @@
 Future<bool> loadUserLocalSettings() async {
-
-  try{
-
+  try {
+    return true;
+  } catch (e) {
+    return false;
   }
 }
