@@ -13,9 +13,9 @@ doc/api/
 
 # dotenv environment variables file
 .env*
-./android/
-./ios/
-./auto_commit.py
+android/
+ios/
+auto_commit.py
 
 # Avoid committing generated Javascript files:
 *.dart.js
