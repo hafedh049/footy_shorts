@@ -12,10 +12,11 @@ class Main extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AdaptiveTheme(
-      builder: (ThemeData light, ThemeData dark) {},
-      child: GetMaterialApp(
-        debugShowCheckedModeBanner: false,
-      ),
+      builder: (ThemeData light, ThemeData dark) {
+        return GetMaterialApp(
+          debugShowCheckedModeBanner: false,
+        );
+      },
     );
   }
 }
