@@ -10,6 +10,8 @@ class VideoHighlight extends StatefulWidget {
 class _VideoHighlightState extends State<VideoHighlight> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Column(
+      children: <Widget>[],
+    );
   }
 }
