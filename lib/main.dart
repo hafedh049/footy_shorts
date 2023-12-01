@@ -16,7 +16,7 @@ class Main extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AdaptiveTheme(
-      initial: userLocalSettings!.get('') AdaptiveThemeMode.dark,
+      initial: userLocalSettings!.get('theme') == 'dark' ? AdaptiveThemeMode.dark : AdaptiveThemeMode.light,
       builder: (ThemeData light, ThemeData dark) {
         return GetMaterialApp(
           debugShowCheckedModeBanner: false,
