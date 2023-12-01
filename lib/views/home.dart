@@ -29,7 +29,7 @@ class _HomeState extends State<Home> {
       body: PageView.builder(
         onPageChanged: (int index) {},
         itemCount: 3,
-        itemBuilder: (BuildContext context, int index) =>,
+        itemBuilder: (BuildContext context, int index) => _screens[index],
       ),
     );
   }
