@@ -1,1 +1,6 @@
-Future<bool> loadUserLocalSettings() async {}
+Future<bool> loadUserLocalSettings() async {
+
+  try{
+
+  }
+}
