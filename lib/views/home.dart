@@ -12,6 +12,8 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: PageView.builder(
+        onPageChanged: (int index) {},
+        itemCount: 3,
         itemBuilder: (BuildContext context, int index) {},
       ),
     );
