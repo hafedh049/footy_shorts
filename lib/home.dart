@@ -58,11 +58,6 @@ class _HomeState extends State<Home> {
             text: 'Reservation',
             onPressed: () {},
           ),
-          GButton(
-            icon: FontAwesome.page4,
-            text: 'Reservation',
-            onPressed: () {},
-          ),
         ],
       ),
       body: PageView.builder(
