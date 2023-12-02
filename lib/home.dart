@@ -31,16 +31,16 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: GNav(
-        backgroundColor: gray.withOpacity(.1), onTabChange: (int index) {}, selectedIndex: currentPage, style: GnavStyle.google,
-        rippleColor: gray, // tab button ripple color when pressed
-        hoverColor: gray, // tab button hover color
-        haptic: true, // haptic feedback
-        tabBorderRadius: 15, // tab button border
-        curve: Curves.linear, // tab animation curves
-        duration: 500.ms, // tab animation duration
-        gap: 8, // the tab button gap between icon and text
-        activeColor: teal, // selected icon and text color
-        iconSize: 15, // tab button icon size
+        backgroundColor: gray.withOpacity(.1), onTabChange: (int index) {}, selectedIndex: currentPage,
+        rippleColor: gray,
+        hoverColor: gray,
+        haptic: true,
+        tabBorderRadius: 15,
+        curve: Curves.linear,
+        duration: 500.ms,
+        gap: 8,
+        activeColor: teal,
+        iconSize: 15,
         tabBackgroundColor: teal.withOpacity(.1), // selected tab background color
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20), // navigation bar padding
         tabs: <GButton>[
