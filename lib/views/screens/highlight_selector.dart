@@ -14,9 +14,9 @@ class VideoSelector extends StatefulWidget {
 class _VideoSelectorState extends State<VideoSelector> {
   VideoPlayerController? _videoPlayerController;
 
-  Future<void> selectImages() async {
+  Future<void> _selectVideos() async {
     List<Media> imagesPaths = await ImagePickers.pickerPaths(
-      galleryMode: GalleryMode.image,
+      galleryMode: GalleryMode.video,
       selectCount: 2,
       showGif: false,
       showCamera: true,
