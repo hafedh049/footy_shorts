@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:footy_shorts/utils/globals.dart';
 import 'package:footy_shorts/views/screens/highlight_selector.dart';
 import 'package:footy_shorts/views/screens/reservation.dart';
@@ -33,8 +34,8 @@ class _HomeState extends State<Home> {
           hoverColor: gray, // tab button hover color
           haptic: true, // haptic feedback
           tabBorderRadius: 15, // tab button border
-          curve: Curves.easeOutExpo, // tab animation curves
-          duration: Duration(milliseconds: 900), // tab animation duration
+          curve: Curves.linear, // tab animation curves
+          duration: 500.ms, // tab animation duration
           gap: 8, // the tab button gap between icon and text
           color: Colors.grey[800], // unselected icon color
           activeColor: Colors.purple, // selected icon and text color
