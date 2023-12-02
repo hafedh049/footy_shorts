@@ -22,7 +22,7 @@ class Main extends StatelessWidget {
     return GetMaterialApp(
       theme: ThemeData.dark(),
       debugShowCheckedModeBanner: false,
-      home: FutureBuilder<FirebaseApp>(
+      home: FutureBuilder<bool>(
         future: load(),
         builder: (BuildContext context, AsyncSnapshot<FirebaseApp> snapshot) {
           if (snapshot.hasData) {
