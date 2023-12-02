@@ -4,6 +4,7 @@ import 'package:footy_shorts/utils/globals.dart';
 import 'package:footy_shorts/views/screens/highlight_selector.dart';
 import 'package:footy_shorts/views/screens/reservation.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
+import 'package:icons_plus/icons_plus.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -43,7 +44,7 @@ class _HomeState extends State<Home> {
           padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 5), // navigation bar padding
           tabs: <GButton>[
             GButton(
-              icon: LineIcons.home,
+              icon: Bootstrap.home,
               text: 'Home',
             ),
             GButton(
