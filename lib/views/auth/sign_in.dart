@@ -15,13 +15,11 @@ class _SignInState extends State<SignIn> {
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
 
-
   @override
   void initState() {
-    if(userLocalSettings!.){}
+    if (userLocalSettings!.get("")) {}
     super.initState();
   }
-
 
   @override
   void dispose() {
