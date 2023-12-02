@@ -24,7 +24,7 @@ class Main extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: FutureBuilder<bool>(
         future: load(),
-        builder: (BuildContext context, AsyncSnapshot<FirebaseApp> snapshot) {
+        builder: (BuildContext context, AsyncSnapshot<bool> snapshot) {
           if (snapshot.hasData) {
             return FirebaseAuth.instance.currentUser == null ? const SignIn() : const Home();
           } else if (snapshot.connectionState == ConnectionState.waiting) {
