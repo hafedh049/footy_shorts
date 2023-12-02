@@ -16,7 +16,7 @@ class _SignInState extends State<SignIn> {
       body: Stack(
         children: <Widget>[
           CarouselSlider.builder(
-            itemCount: 15,
+            itemCount: 4,
             options: CarouselOptions(
               height: MediaQuery.sizeOf(context).height * .5,
               initialPage: 0,
