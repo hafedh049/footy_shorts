@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:infinite_carousel/infinite_carousel.dart';
 
 class SignIn extends StatefulWidget {
   const SignIn({super.key});
