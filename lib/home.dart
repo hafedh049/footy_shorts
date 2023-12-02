@@ -43,10 +43,7 @@ class _HomeState extends State<Home> {
           tabBackgroundColor: teal.withOpacity(.1), // selected tab background color
           padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 5), // navigation bar padding
           tabs: <GButton>[
-            GButton(
-              icon: Bootstrap.house,
-              text: 'Home',
-            ),
+            GButton(icon: Bootstrap.house, text: 'Home'),
             GButton(
               icon: LineIcons.heart_o,
               text: 'Likes',
