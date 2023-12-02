@@ -40,14 +40,6 @@ class _SignInState extends State<SignIn> {
               );
             },
           ),
-          InfiniteCarousel.builder(
-            itemCount: 4,
-            itemExtent: MediaQuery.sizeOf(context).width,
-            velocityFactor: 0.2,
-            axisDirection: Axis.horizontal,
-            loop: true,
-            itemBuilder: (BuildContext context, int itemIndex, int realIndex) {},
-          ),
           Padding(
             padding: const EdgeInsets.all(16),
             child: Column(
