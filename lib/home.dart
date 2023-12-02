@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:footy_shorts/views/screens/highlight_selector.dart';
 import 'package:footy_shorts/views/screens/reservation.dart';
+import 'package:google_nav_bar/google_nav_bar.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -26,6 +27,7 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      bottomNavigationBar: GNav(tabs: tabs),
       body: PageView.builder(
         onPageChanged: (int index) {},
         itemCount: 3,
