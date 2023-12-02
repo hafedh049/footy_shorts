@@ -18,6 +18,8 @@ class _VideoSelectorState extends State<VideoSelector> {
         ? Center(
             child: InkWell(
               highlightColor: transparent,
+              focusColor: transparent,
+              splashColor: transparent,
               child: Column(
                 children: <Widget>[
                   LottieBuilder.asset("assets/lotties/add.json", width: 60, height: 60),
