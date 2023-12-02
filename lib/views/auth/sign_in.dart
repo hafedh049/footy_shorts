@@ -56,7 +56,9 @@ class _SignInState extends State<SignIn> {
                       const SizedBox(height: 20),
                       Form(
                         child: Column(
-                          children: <Widget>[],
+                          children: <Widget>[
+                            TextFormField(),
+                          ],
                         ),
                       ),
                     ],
