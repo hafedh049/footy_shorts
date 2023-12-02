@@ -22,7 +22,7 @@ class _SignInState extends State<SignIn> {
               initialPage: 0,
               autoPlay: true,
               autoPlayInterval: 2.seconds,
-              autoPlayAnimationDuration: Duration(milliseconds: 800),
+              autoPlayAnimationDuration: 2.seconds,
               autoPlayCurve: Curves.fastOutSlowIn,
               enlargeCenterPage: true,
               enlargeFactor: 0.3,
