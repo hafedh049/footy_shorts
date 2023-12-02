@@ -34,7 +34,10 @@ class _SignInState extends State<SignIn> {
           Padding(
             padding: const EdgeInsets.all(16),
             child: Column(
-              children: <Widget>[SizedBox(height: MediaQuery.sizeOf(context).height * .4), Column()],
+              children: <Widget>[
+                SizedBox(height: MediaQuery.sizeOf(context).height * .4),
+                Column(),
+              ],
             ),
           ),
         ],
