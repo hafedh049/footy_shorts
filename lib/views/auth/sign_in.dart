@@ -20,10 +20,8 @@ class _SignInState extends State<SignIn> {
             options: CarouselOptions(
               height: 400,
               aspectRatio: 16 / 9,
-              viewportFraction: 0.8,
+              viewportFraction: .5
               initialPage: 0,
-              enableInfiniteScroll: true,
-              reverse: false,
               autoPlay: true,
               autoPlayInterval: 2.seconds,
               autoPlayAnimationDuration: Duration(milliseconds: 800),
