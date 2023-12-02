@@ -26,13 +26,13 @@ Future<bool> load() async {
     );
     await loadUserLocalSettings();
     if (userLocalSettings!.get("first_time") == null) {
-      userLocalSettings!.put("first_time", true);
+      await userLocalSettings!.put("first_time", true);
     }
     if (userLocalSettings!.get("theme") == null) {
-      userLocalSettings!.put("theme", "dark");
+      await userLocalSettings!.put("theme", "dark");
     }
     if (userLocalSettings!.get("language") == null) {
-      userLocalSettings!.put("language", "en");
+      await userLocalSettings!.put("language", "en");
     }
     return true;
   } catch (e) {
