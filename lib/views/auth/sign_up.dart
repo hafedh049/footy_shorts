@@ -21,51 +21,66 @@ class _SignUpState extends State<SignUp> {
 
   final List<Color> _passwordStrength = List<Color>.generate(3, (int index) => white.withOpacity(.5));
 
+  final List<String> _notes = <String>[
+    "Contains at least 8 characters",
+    "Contains at least a uppercase letter",
+    "Contains at least a lowercase letter",
+    "Contains at least one digit",
+    "Contains at least a character from this set: {!, @, #, \$, *, ?}",
+  ];
+
   bool _passwordState = false;
   bool _confirmPasswordState = false;
   bool _emailState = false;
   bool _usernameState = false;
 
-  void _computeStrength(String password) {
+  void _computeStrength() {
     int score = 0;
 
-    // Criteria weights
-    int lengthWeight = 2;
-    int upperCaseWeight = 2;
-    int lowerCaseWeight = 2;
-    int digitWeight = 2;
-    int specialCharWeight = 3;
+    const int lengthWeight = 2;
+    const int upperCaseWeight = 2;
+    const int lowerCaseWeight = 2;
+    const int digitWeight = 2;
+    const int specialCharWeight = 3;
 
-    // Length check
+    final String password = _passwordController.text.trim();
+
     if (password.length >= 8) {
       score += lengthWeight;
     }
 
-    // Check for uppercase letters
     if (RegExp(r'[A-Z]').hasMatch(password)) {
       score += upperCaseWeight;
     }
 
-    // Check for lowercase letters
     if (RegExp(r'[a-z]').hasMatch(password)) {
       score += lowerCaseWeight;
     }
 
-    // Check for digits
     if (RegExp(r'[0-9]').hasMatch(password)) {
       score += digitWeight;
     }
 
-    // Check for special characters
     if (RegExp(r'[!@#\$%\^&\*(),.?":{}|<>]').hasMatch(password)) {
       score += specialCharWeight;
     }
 
     if (score < 6) {
       _passwordStrength.fillRange(0, 1, teal);
-    } else if (score < 9) {
-    } else if (score < 12) {
-    } else {}
+    } else {
+      _passwordStrength.fillRange(0, 1, white.withOpacity(.5));
+    }
+    if (score < 9) {
+      _passwordStrength.fillRange(1, 2, teal);
+    } else {
+      _passwordStrength.fillRange(1, 2, white.withOpacity(.5));
+    }
+
+    if (score < 12) {
+      _passwordStrength.fillRange(2, 3, teal);
+    } else {
+      _passwordStrength.fillRange(2, 3, white.withOpacity(.5));
+    }
   }
 
   Future<void> _showInfo() async {
@@ -74,7 +89,22 @@ class _SignUpState extends State<SignUp> {
       builder: (BuildContext context) => Padding(
         padding: const EdgeInsets.all(24),
         child: Column(
-          children: <Widget>[],
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisSize: MainAxisSize.min,
+          children: <Widget>[
+            for (String note in _notes)
+              Container(
+                margin: const EdgeInsets.only(bottom: 8),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    const Icon(FontAwesome.star, color: teal),
+                    const SizedBox(width: 10),
+                    Flexible(child: Text(note, style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w500))),
+                  ],
+                ),
+              ),
+          ],
         ),
       ),
     );
