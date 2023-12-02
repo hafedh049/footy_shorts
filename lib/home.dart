@@ -61,6 +61,7 @@ class _HomeState extends State<Home> {
         ],
       ),
       body: PageView.builder(
+        controller: _screensController,
         itemCount: 3,
         itemBuilder: (BuildContext context, int index) => _screens[index],
       ),
