@@ -24,7 +24,7 @@ class _SignInState extends State<SignIn> {
             axisDirection: Axis.horizontal,
             loop: true,
             itemBuilder: (context, itemIndex, realIndex) {},
-          )
+          ),
         ],
       ),
     );
