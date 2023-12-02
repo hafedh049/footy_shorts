@@ -72,11 +72,7 @@ class _SignInState extends State<SignIn> {
                             children: <Widget>[
                               TextFormField(
                                 controller: _emailController,
-                                decoration: InputDecoration(
-                                  border: OutlineInputBorder(borderRadius: BorderRadius.circular(10), borderSide: BorderSide(width: .5, color: gray.withOpacity(.5))),
-                                  hintText: "Email",
-                                  contentPadding: const EdgeInsets.all(8),
-                                ),
+                                decoration: InputDecoration(border: OutlineInputBorder(borderRadius: BorderRadius.circular(10), borderSide: BorderSide(width: .5, color: gray.withOpacity(.5))), hintText: "Email", contentPadding: const EdgeInsets.all(8), alignLabelWithHint: true, focusColor: gray),
                               ),
                             ],
                           ),
