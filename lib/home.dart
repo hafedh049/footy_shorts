@@ -45,7 +45,7 @@ class _HomeState extends State<Home> {
         iconSize: 25,
         tabBackgroundColor: teal.withOpacity(.1),
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
-        tabs: <GButton>[
+        tabs: const <GButton>[
           GButton(icon: FontAwesome.page4, text: 'Reservation'),
           GButton(icon: FontAwesome.highlighter, text: 'Highlight'),
           GButton(icon: Bootstrap.clock_history, text: 'Reservation'),
