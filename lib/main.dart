@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:footy_shorts/home.dart';
 import 'package:footy_shorts/utils/globals.dart';
 import 'package:footy_shorts/utils/methods.dart';
+import 'package:footy_shorts/views/auth/sign_in.dart';
 import 'package:get/get.dart';
 import 'package:lottie/lottie.dart';
 
@@ -33,7 +34,7 @@ class Main extends StatelessWidget {
         ),
         builder: (BuildContext context, AsyncSnapshot<FirebaseApp> snapshot) {
           if (snapshot.hasData) {
-            return FirebaseAuth.instance.currentUser == null ?  : const Home();
+            return FirebaseAuth.instance.currentUser == null ? const SignIn() : const Home();
           } else if (snapshot.connectionState == ConnectionState.waiting) {
             return Scaffold(body: Center(child: LottieBuilder.asset("assets/lotties/load.json", width: 80, height: 80)));
           } else {
