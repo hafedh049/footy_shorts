@@ -5,5 +5,4 @@ ThemeData lightTheme = ThemeData(
   brightness: Brightness.light,
   primaryColor: blue,
   hintColor: blue,
-  scaffoldBackgroundColor: white,
 );
