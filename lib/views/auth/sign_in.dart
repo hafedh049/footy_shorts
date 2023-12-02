@@ -24,7 +24,6 @@ class _SignInState extends State<SignIn> {
               autoPlayInterval: 2.seconds,
               autoPlayAnimationDuration: 2.seconds,
               autoPlayCurve: Curves.fastOutSlowIn,
-              enlargeCenterPage: true,
               enlargeFactor: 0,
               scrollDirection: Axis.horizontal,
             ),
