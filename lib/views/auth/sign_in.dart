@@ -12,7 +12,6 @@ class _SignInState extends State<SignIn> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Stack(
-        crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[],
       ),
     );
