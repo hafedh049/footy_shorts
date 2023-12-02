@@ -29,7 +29,7 @@ class _SignInState extends State<SignIn> {
             anchor: 0.0,
             velocityFactor: 0.2,
             onIndexChanged: (index) {},
-            controller: controller,
+            controller: _carousselController,
             axisDirection: Axis.horizontal,
             loop: true,
             itemBuilder: (context, itemIndex, realIndex) {},
