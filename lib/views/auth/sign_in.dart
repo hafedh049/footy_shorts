@@ -24,7 +24,7 @@ class _SignInState extends State<SignIn> {
         children: <Widget>[
           InfiniteCarousel.builder(
             itemCount: 4,
-            itemExtent: MediaQuery.sizeOf(context).height * .5,
+            itemExtent: MediaQuery.sizeOf(context).width,
             center: true,
             anchor: 0.0,
             velocityFactor: 0.2,
