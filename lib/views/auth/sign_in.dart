@@ -72,6 +72,9 @@ class _SignInState extends State<SignIn> {
                             children: <Widget>[
                               TextFormField(
                                 controller: _emailController,
+                                decoration: InputDecoration(
+                                  border: OutlineInputBorder(),
+                                ),
                               ),
                             ],
                           ),
