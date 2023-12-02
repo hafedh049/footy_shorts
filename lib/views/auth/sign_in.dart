@@ -19,7 +19,7 @@ class _SignInState extends State<SignIn> {
             itemCount: 4,
             options: CarouselOptions(
               viewportFraction: 1,
-              height: MediaQuery.sizeOf(context).height * .5,
+              height: MediaQuery.sizeOf(context).height * .6,
               initialPage: 0,
               autoPlay: true,
               autoPlayInterval: 2.seconds,
