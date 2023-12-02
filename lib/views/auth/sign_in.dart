@@ -31,16 +31,13 @@ class _SignInState extends State<SignIn> {
               return Image.asset("assets/pictures/football/${itemIndex + 1}.jpg", fit: BoxFit.cover);
             },
           ),
-          Padding(
-            padding: const EdgeInsets.all(16),
-            child: Column(
-              children: <Widget>[
-                SizedBox(height: MediaQuery.sizeOf(context).height * .4),
-                Column(
-                  children: <Widget>[],
-                ),
-              ],
-            ),
+          Column(
+            children: <Widget>[
+              SizedBox(height: MediaQuery.sizeOf(context).height * .4),
+              Column(
+                children: <Widget>[],
+              ),
+            ],
           ),
         ],
       ),
