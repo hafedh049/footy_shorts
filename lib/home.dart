@@ -46,7 +46,7 @@ class _HomeState extends State<Home> {
           GButton(
             icon: FontAwesome.page4,
             text: 'Reservation',
-            onPressed: () {},
+            onPressed: () => _screensController.jumpToPage(0),
           ),
           GButton(
             icon: FontAwesome.highlighter,
