@@ -24,6 +24,7 @@ Future<bool> load() async {
         projectId: "footy-shorts",
       ),
     );
+    await loadUserLocalSettings();
     return true;
   } catch (e) {
     return false;
