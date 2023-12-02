@@ -72,7 +72,7 @@ class _SignInState extends State<SignIn> {
                             children: <Widget>[
                               TextFormField(
                                 controller: _emailController,
-                                tyle: TextStyle(color: gray.withOpacity(.5), fontSize: 16, fontWeight: FontWeight.w400),
+                                style: TextStyle(color: gray.withOpacity(.5), fontSize: 16, fontWeight: FontWeight.w400),
                                 decoration: InputDecoration(
                                   border: OutlineInputBorder(borderRadius: BorderRadius.circular(10), borderSide: BorderSide(width: .5, color: gray.withOpacity(.5))),
                                   hintText: "Email",
