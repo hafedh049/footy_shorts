@@ -32,7 +32,7 @@ Future<bool> load() async {
       userLocalSettings!.put("theme", "dark");
     }
     if (userLocalSettings!.get("language") == null) {
-      userLocalSettings!.put("first_time", true);
+      userLocalSettings!.put("language", "en");
     }
     return true;
   } catch (e) {
