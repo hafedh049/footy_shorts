@@ -61,7 +61,7 @@ class _SignInState extends State<SignIn> {
                           Text(userLocalSettings!.get("first_time") ? "Welcome" : "Welcome\nBack", style: const TextStyle(fontSize: 24, color: white, fontWeight: FontWeight.w500)),
                           const Spacer(),
                           Container(
-                            decoration: BoxDecoration(color: white.withOpacity(.2), shape: BoxShape.circle),
+                            decoration: BoxDecoration(color: white.withOpacity(.5), shape: BoxShape.circle),
                             padding: const EdgeInsets.all(16),
                             child: Icon(FontAwesome.hands, color: yellow, size: 25),
                           ),
