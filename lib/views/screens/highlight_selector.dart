@@ -30,19 +30,17 @@ class _VideoSelectorState extends State<VideoSelector> {
   @override
   Widget build(BuildContext context) {
     return (_videoPlayerController == null)
-        ? Center(
-            child: InkWell(
-              highlightColor: transparent,
-              focusColor: transparent,
-              splashColor: transparent,
-              onTap: () async {},
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  LottieBuilder.asset("assets/lotties/add.json", width: 60, height: 60),
-                  const Text("Import Video", style: TextStyle(color: teal, fontSize: 16, fontWeight: FontWeight.w400)),
-                ],
-              ),
+        ? InkWell(
+            highlightColor: transparent,
+            focusColor: transparent,
+            splashColor: transparent,
+            onTap: () async {},
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                LottieBuilder.asset("assets/lotties/add.json", width: 60, height: 60),
+                const Text("Import Video", style: TextStyle(color: teal, fontSize: 16, fontWeight: FontWeight.w400)),
+              ],
             ),
           )
         : VideoPlayer(_videoPlayerController!);
