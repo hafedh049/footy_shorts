@@ -9,6 +9,13 @@ class SignIn extends StatefulWidget {
 }
 
 class _SignInState extends State<SignIn> {
+  final ScrollController _carousselController = ScrollController();
+  @override
+  void dispose() {
+    _carousselController.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
