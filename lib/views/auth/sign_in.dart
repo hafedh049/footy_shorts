@@ -37,7 +37,9 @@ class _SignInState extends State<SignIn> {
               Container(
                 padding: const EdgeInsets.all(16),
                 child: Column(
-                  children: <Widget>[],
+                  children: <Widget>[
+                    Row(),
+                  ],
                 ),
               ),
             ],
