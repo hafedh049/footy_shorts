@@ -73,7 +73,7 @@ class _SignInState extends State<SignIn> {
                               TextFormField(
                                 controller: _emailController,
                                 decoration: InputDecoration(
-                                  border: OutlineInputBorder(),
+                                  border: OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
                                 ),
                               ),
                             ],
