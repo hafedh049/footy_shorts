@@ -46,7 +46,7 @@ class _HomeState extends State<Home> {
         tabBackgroundColor: teal.withOpacity(.1),
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
         tabs: const <GButton>[
-          GButton(icon: Bootstrap.paperclip, text: 'Reservation'),
+          GButton(icon: FontAwesome.paperclip, text: 'Reservation'),
           GButton(icon: FontAwesome.highlighter, text: 'Edit'),
           GButton(icon: Bootstrap.clock_history, text: 'Highlights'),
         ],
