@@ -7,6 +7,7 @@ const Color blue = Color.fromARGB(255, 0, 128, 178);
 const Color gray = Color.fromARGB(255, 51, 56, 66);
 const Color white = Color.fromARGB(255, 204, 204, 195);
 const Color transparent = Colors.transparent;
+Color yellow = Colors.yellow.shade600;
 
 //VARS
 Box? userLocalSettings;
