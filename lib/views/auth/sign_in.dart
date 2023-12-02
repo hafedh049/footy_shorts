@@ -53,7 +53,7 @@ class _SignInState extends State<SignIn> {
                           ),
                         ],
                       ),
-                      cosnt SizedBox(),
+                      const SizedBox(),
                     ],
                   ),
                 ),
