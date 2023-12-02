@@ -19,7 +19,7 @@ class Main extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: FutureBuilder<>(
           future: null,
-          builder: (context, snapshot) {
+          builder: (BuildContext context, snapshot) {
             return const Home();
           },),
     );
