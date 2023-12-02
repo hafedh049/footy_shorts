@@ -21,13 +21,13 @@ class _SignUpState extends State<SignUp> {
 
   final List<Color> _passwordStrength = List<Color>.generate(3, (int index) => white.withOpacity(.5));
 
-  final List<String> _notes = <String>[
-    "Contains at least 8 characters",
-    "Contains at least a uppercase letter",
-    "Contains at least a lowercase letter",
-    "Contains at least one digit",
-    "Contains at least a character from this set: {!, @, #, \$, *, ?}",
-  ];
+  final Map<String, String> _notes = <String, String>{
+    "Contains at least 8 characters": r".{8,}",
+    "Contains at least a uppercase letter": r"",
+    "Contains at least a lowercase letter": r"",
+    "Contains at least one digit": r"",
+    "Contains at least a character from this set: {!, @, #, \$, *, ?}": r"",
+  };
 
   bool _passwordState = false;
   bool _confirmPasswordState = false;
@@ -57,29 +57,34 @@ class _SignUpState extends State<SignUp> {
       score += lowerCaseWeight;
     }
 
-    if (RegExp(r'[0-9]').hasMatch(password)) {
+    if (RegExp(r'\d').hasMatch(password)) {
       score += digitWeight;
     }
 
-    if (RegExp(r'[!@#\$%\^&\*(),.?":{}|<>]').hasMatch(password)) {
+    if (RegExp(r'[@#\$\*\?]').hasMatch(password)) {
       score += specialCharWeight;
     }
 
-    if (score < 6) {
-      _passwordStrength.fillRange(0, 1, teal);
-    } else {
-      _passwordStrength.fillRange(0, 1, white.withOpacity(.5));
-    }
-    if (score < 9) {
-      _passwordStrength.fillRange(1, 2, teal);
-    } else {
-      _passwordStrength.fillRange(1, 2, white.withOpacity(.5));
+    if (!RegExp(r'[@#\$\*\?a-zA-Z\d]').hasMatch(password)) {
+      score = 0;
     }
 
-    if (score < 12) {
-      _passwordStrength.fillRange(2, 3, teal);
+    if (score == 0) {
+      _passwordStrength[0] = white.withOpacity(.5);
+      _passwordStrength[1] = white.withOpacity(.5);
+      _passwordStrength[2] = white.withOpacity(.5);
+    } else if (score < 6) {
+      _passwordStrength[0] = teal;
+      _passwordStrength[1] = white.withOpacity(.5);
+      _passwordStrength[2] = white.withOpacity(.5);
+    } else if (score < 9) {
+      _passwordStrength[0] = teal;
+      _passwordStrength[1] = teal;
+      _passwordStrength[2] = white.withOpacity(.5);
     } else {
-      _passwordStrength.fillRange(2, 3, white.withOpacity(.5));
+      _passwordStrength[0] = teal;
+      _passwordStrength[1] = teal;
+      _passwordStrength[2] = teal;
     }
   }
 
@@ -92,15 +97,15 @@ class _SignUpState extends State<SignUp> {
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
-            for (String note in _notes)
+            for (MapEntry<String, String> note in _notes.entries)
               Container(
                 margin: const EdgeInsets.only(bottom: 8),
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
-                    const Icon(FontAwesome.star, color: teal),
+                    Icon(RegExp(note.value).hasMatch(_passwordController.text.trim()) ? FontAwesome.star_half : FontAwesome.star, color: teal, size: 20, fill: 1),
                     const SizedBox(width: 10),
-                    Flexible(child: Text(note, style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w500))),
+                    Flexible(child: Text(note.key, style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w500))),
                   ],
                 ),
               ),
