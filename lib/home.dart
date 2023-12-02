@@ -51,7 +51,7 @@ class _HomeState extends State<Home> {
           GButton(
             icon: FontAwesome.highlighter,
             text: 'Highlight',
-            onPressed: () => _screensController.jumpToPage(0),
+            onPressed: () => _screensController.jumpToPage(1),
           ),
           GButton(
             icon: Bootstrap.clock_history,
