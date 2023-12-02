@@ -18,7 +18,7 @@ class _VideoSelectorState extends State<VideoSelector> {
             child: Column(
               children: <Widget>[
                 LottieBuilder.asset("assets/lotties/add.json", width: 60, height: 60),
-                Text("Import Video", style: TextStyle()),
+                Text("Import Video", style: TextStyle(fontSize: 16,fontWeight: )),
               ],
             ),
           )
