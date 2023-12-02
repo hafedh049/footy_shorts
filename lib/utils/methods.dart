@@ -11,3 +11,7 @@ Future<bool> loadUserLocalSettings() async {
     return false;
   }
 }
+
+Future<bool> load() async {
+  try {} catch (e) {}
+}
