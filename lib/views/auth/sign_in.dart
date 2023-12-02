@@ -38,6 +38,7 @@ class _SignInState extends State<SignIn> {
               SizedBox(height: MediaQuery.sizeOf(context).height * .4),
               Expanded(
                 child: Container(
+                  decoration: const BoxDecoration(borderRadius: BorderRadius.only(topLeft: Radius.circular(15), topRight: Radius.circular(15))),
                   padding: const EdgeInsets.all(16),
                   child: Column(
                     children: <Widget>[
