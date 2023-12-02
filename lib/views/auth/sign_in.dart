@@ -40,8 +40,11 @@ class _SignInState extends State<SignIn> {
               );
             },
           ),
-          Column(
-            children: <Widget>[],
+          Padding(
+            padding: const EdgeInsets.all(16),
+            child: Column(
+              children: <Widget>[],
+            ),
           ),
         ],
       ),
