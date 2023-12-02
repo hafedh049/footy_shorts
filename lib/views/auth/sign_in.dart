@@ -46,7 +46,7 @@ class _SignInState extends State<SignIn> {
                         const Spacer(),
                         Container(
                           decoration: BoxDecoration(
-                            borderRadius: BorderRadius.only(),
+                            borderRadius: BorderRadius.only(topLeft: Radius.circular(15), topRight: Radius.circular(15)),
                           ),
                           padding: const EdgeInsets.all(16),
                           child: Icon(FontAwesome.hands, color: yellow, size: 25),
