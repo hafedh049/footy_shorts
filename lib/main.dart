@@ -21,7 +21,7 @@ class Main extends StatelessWidget {
           stream: null,
           builder: (context, snapshot) {
             return const Home();
-          }),
+          },),
     );
   }
 }
