@@ -70,7 +70,9 @@ class _SignInState extends State<SignIn> {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: <Widget>[
-                              TextFormField(),
+                              TextFormField(
+                                controller: _emailController,
+                              ),
                             ],
                           ),
                         ),
