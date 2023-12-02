@@ -32,7 +32,7 @@ class _SignInState extends State<SignIn> {
             controller: _carousselController,
             axisDirection: Axis.horizontal,
             loop: true,
-            itemBuilder: (context, itemIndex, realIndex) {},
+            itemBuilder: (BuildContext context, itemIndex, realIndex) {},
           ),
         ],
       ),
