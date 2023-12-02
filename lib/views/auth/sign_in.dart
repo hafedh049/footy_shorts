@@ -1,5 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:footy_shorts/utils/globals.dart';
 import 'package:get/get.dart';
 
 class SignIn extends StatefulWidget {
@@ -40,7 +41,7 @@ class _SignInState extends State<SignIn> {
                   children: <Widget>[
                     Row(
                       children: <Widget>[
-                        Text(""),
+                        Text(userLocalSettings!.get("first_time")),
                         const Spacer(),
                       ],
                     ),
