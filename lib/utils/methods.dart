@@ -14,6 +14,15 @@ Future<bool> loadUserLocalSettings() async {
 
 Future<bool> load() async {
   try {
+    Firebase.initializeApp(
+          options: const FirebaseOptions(
+            storageBucket: "footy-shorts.appspot.com",
+            apiKey: "AIzaSyBW-rnLPP0cHENo9WRbmwZZNzGP3f1KwkA",
+            appId: "1:731346863322:android:d7391a9de82ddcc03c91e3",
+            messagingSenderId: "731346863322",
+            projectId: "footy-shorts",
+          ),
+        )
     return true;
   } catch (e) {
     return false;
