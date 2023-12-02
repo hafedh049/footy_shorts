@@ -44,7 +44,7 @@ class _HomeState extends State<Home> {
           padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 5), // navigation bar padding
           tabs: <GButton>[
             GButton(
-              icon: Bootstrap.home,
+              icon: Bootstrap.house,
               text: 'Home',
             ),
             GButton(
