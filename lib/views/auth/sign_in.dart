@@ -37,7 +37,7 @@ class _SignInState extends State<SignIn> {
               children: <Widget>[
                 SizedBox(height: MediaQuery.sizeOf(context).height * .4),
                 Column(
-                  children: <WIDGET>[],
+                  children: <Widget>[],
                 ),
               ],
             ),
