@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
 import 'package:video_player/video_player.dart';
 
 class VideoSelector extends StatefulWidget {
@@ -14,7 +15,7 @@ class _VideoSelectorState extends State<VideoSelector> {
   Widget build(BuildContext context) {
     return (_videoPlayerController == null)
         ? Center(
-            child: Column(children: <Widget>[Lottie]),
+            child: Column(children: <Widget>[LottieBuilder.asset(name)]),
           )
         : Column(
             children: <Widget>[
