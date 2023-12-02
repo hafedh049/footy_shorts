@@ -33,7 +33,7 @@ class _SignInState extends State<SignIn> {
             axisDirection: Axis.horizontal,
             loop: true,
             itemBuilder: (BuildContext context, int itemIndex, int realIndex) {
-              return Image.asset(name);
+              return Image.asset("assets/images/foot/$itemIndex.png");
             },
           ),
         ],
