@@ -21,7 +21,7 @@ class _VideoSelectorState extends State<VideoSelector> {
       showGif: false,
       showCamera: true,
       compressSize: 500,
-      uiConfig: UIConfig(uiThemeColor: Color(0xffff0f50)),
+      uiConfig: UIConfig(uiThemeColor: teal),
       cropConfig: CropConfig(enableCrop: false, width: 2, height: 1),
     );
   }
