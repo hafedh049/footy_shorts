@@ -54,12 +54,14 @@ class _SignInState extends State<SignIn> {
                         ],
                       ),
                       const SizedBox(height: 20),
-                      Form(
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: <Widget>[
-                            TextFormField(),
-                          ],
+                      Expanded(
+                        child: Form(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: <Widget>[
+                              TextFormField(),
+                            ],
+                          ),
                         ),
                       ),
                     ],
