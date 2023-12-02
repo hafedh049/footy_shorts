@@ -23,10 +23,6 @@ class _VideoSelectorState extends State<VideoSelector> {
               ],
             ),
           )
-        : Column(
-            children: <Widget>[
-              VideoPlayer(_videoPlayerController!),
-            ],
-          );
+        : VideoPlayer(_videoPlayerController!);
   }
 }
