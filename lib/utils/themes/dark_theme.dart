@@ -5,5 +5,4 @@ ThemeData darkTheme = ThemeData(
   brightness: Brightness.dark,
   primaryColor: teal,
   hintColor: teal,
-  scaffoldBackgroundColor: gray,
 );
