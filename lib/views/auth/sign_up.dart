@@ -108,13 +108,12 @@ class _SignUpState extends State<SignUp> {
                       },
                     ),
                     const SizedBox(height: 20),
-                    const Text.rich(
-                      TextSpan(
-                        children: <TextSpan>[
-                          TextSpan(text: "Password", style: TextStyle(fontSize: 15, fontWeight: FontWeight.w500)),
-                          TextSpan(text: " *", style: TextStyle(fontSize: 15, fontWeight: FontWeight.w500, color: teal)),
-                        ],
-                      ),
+                    Row(
+                      children: <Widget>[
+                        const Text.rich(TextSpan(children: <TextSpan>[TextSpan(text: "Password", style: TextStyle(fontSize: 15, fontWeight: FontWeight.w500)), TextSpan(text: " *", style: TextStyle(fontSize: 15, fontWeight: FontWeight.w500, color: teal))])),
+                        const Spacer(),
+                        IconButton(onPressed: () {}, icon: const Icon(FontAwesome.i, size: 25, color: teal)),
+                      ],
                     ),
                     const SizedBox(height: 10),
                     StatefulBuilder(
