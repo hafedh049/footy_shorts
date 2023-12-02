@@ -31,7 +31,7 @@ Future<bool> load() async {
     if (userLocalSettings!.get("theme") == null) {
       userLocalSettings!.put("theme", "dark");
     }
-    if (userLocalSettings!.get("first_time") == null) {
+    if (userLocalSettings!.get("language") == null) {
       userLocalSettings!.put("first_time", true);
     }
     return true;
