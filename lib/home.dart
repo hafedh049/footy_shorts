@@ -45,7 +45,7 @@ class _HomeState extends State<Home> {
           tabs: <GButton>[
             GButton(
               icon: Bootstrap.house,
-              text: 'Home',
+              text: 'Reservation',
               onPressed: () {},
             ),
             GButton(
