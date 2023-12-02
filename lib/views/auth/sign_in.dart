@@ -16,14 +16,12 @@ class _SignInState extends State<SignIn> {
   final TextEditingController _passwordController = TextEditingController();
 
   @override
-  void initState() {
-    super.initState();
-  }
-
-  @override
   void dispose() {
     _emailController.dispose();
     _passwordController.dispose();
+    if (userLocalSettings!.get("first_time")) {
+      userLocalSettings!.put("first_time", false);
+    }
     super.dispose();
   }
 
