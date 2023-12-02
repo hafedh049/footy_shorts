@@ -15,7 +15,11 @@ class _VideoSelectorState extends State<VideoSelector> {
   Widget build(BuildContext context) {
     return (_videoPlayerController == null)
         ? Center(
-            child: Column(children: <Widget>[LottieBuilder.asset(name)]),
+            child: Column(
+              children: <Widget>[
+                LottieBuilder.asset(name),
+              ],
+            ),
           )
         : Column(
             children: <Widget>[
