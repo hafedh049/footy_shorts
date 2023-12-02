@@ -73,7 +73,9 @@ class _SignInState extends State<SignIn> {
                               TextFormField(
                                 controller: _emailController,
                                 decoration: InputDecoration(
-                                  border: OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
+                                  border: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(10),
+                                  ),
                                 ),
                               ),
                             ],
