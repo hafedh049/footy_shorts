@@ -16,7 +16,10 @@ class _VideoSelectorState extends State<VideoSelector> {
     return (_videoPlayerController == null)
         ? Center(
             child: Column(
-              children: <Widget>[LottieBuilder.asset("assets/lotties/add.json", width: 60, height: 60), Text("Import Video")],
+              children: <Widget>[
+                LottieBuilder.asset("assets/lotties/add.json", width: 60, height: 60),
+                Text("Import Video"),
+              ],
             ),
           )
         : Column(
