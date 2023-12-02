@@ -42,3 +42,5 @@ flutter:
   assets:
     - assets/
     - assets/lotties/
+    - assets/pictures/
+    - assets/pictures/football/
