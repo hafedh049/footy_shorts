@@ -1,6 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:footy_shorts/home.dart';
+import 'package:footy_shorts/utils/globals.dart';
 import 'package:footy_shorts/utils/methods.dart';
 import 'package:get/get.dart';
 import 'package:lottie/lottie.dart';
@@ -27,7 +28,7 @@ class Main extends StatelessWidget {
           } else if (snapshot.connectionState == ConnectionState.waiting) {
             return Scaffold(body: Center(child: LottieBuilder.asset("assets/lotties/load.json", width: 80, height: 80)));
           } else {
-            return Scaffold(body: Center(child: Text(snapshot.error.toString())));
+            return Scaffold(body: Center(child: Text(snapshot.error.toString(), style: const TextStyle(color: teal, fontSize: 16, fontWeight: FontWeight.w500))));
           }
         },
       ),
