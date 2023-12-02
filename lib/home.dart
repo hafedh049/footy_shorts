@@ -45,11 +45,7 @@ class _HomeState extends State<Home> {
         tabs: <GButton>[
           GButton(icon: FontAwesome.page4, text: 'Reservation', onPressed: () => _screensController.jumpToPage(0)),
           GButton(icon: FontAwesome.highlighter, text: 'Highlight', onPressed: () => _screensController.jumpToPage(1)),
-          GButton(
-            icon: Bootstrap.clock_history,
-            text: 'Reservation',
-            onPressed: () => _screensController.jumpToPage(2),
-          ),
+          GButton(icon: Bootstrap.clock_history, text: 'Reservation', onPressed: () => _screensController.jumpToPage(2)),
         ],
       ),
       body: PageView.builder(controller: _screensController, itemCount: 3, itemBuilder: (BuildContext context, int index) => _screens[index]),
