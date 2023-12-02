@@ -22,7 +22,7 @@ class Main extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: FutureBuilder<FirebaseApp>(
         future: Firebase.initializeApp(
-          options: FirebaseOptions(
+          options: const FirebaseOptions(
             storageBucket: "footy-shorts.appspot.com",
             apiKey: "AIzaSyBW-rnLPP0cHENo9WRbmwZZNzGP3f1KwkA",
             appId: "1:731346863322:android:d7391a9de82ddcc03c91e3",
