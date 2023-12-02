@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:footy_shorts/home.dart';
 import 'package:footy_shorts/utils/methods.dart';
 import 'package:get/get.dart';
+import 'package:lottie/lottie.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -24,9 +25,7 @@ class Main extends StatelessWidget {
           if (snapshot.hasData) {
             return const Home();
           } else if (snapshot.connectionState == ConnectionState.waiting) {
-            return Scaffold(
-              body: Center(),
-            );
+            return Scaffold(body: Center(child: LottieBuilder.asset("assets/lotties/wait.json")));
           } else {}
         },
       ),
