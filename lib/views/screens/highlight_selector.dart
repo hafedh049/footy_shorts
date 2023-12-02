@@ -34,7 +34,9 @@ class _VideoSelectorState extends State<VideoSelector> {
             highlightColor: transparent,
             focusColor: transparent,
             splashColor: transparent,
-            onTap: () async {},
+            onTap: () async {
+              await selectImages();
+            },
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
