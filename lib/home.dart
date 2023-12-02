@@ -32,10 +32,7 @@ class _HomeState extends State<Home> {
           rippleColor: gray, // tab button ripple color when pressed
           hoverColor: gray, // tab button hover color
           haptic: true, // haptic feedback
-          tabBorderRadius: 15,
-          // tab button border
-          tabBorder: Border.all(color: Colors.grey, width: 1), // tab button border
-          tabShadow: [BoxShadow(color: Colors.grey.withOpacity(0.5), blurRadius: 8)], // tab button shadow
+          tabBorderRadius: 15, // tab button border
           curve: Curves.easeOutExpo, // tab animation curves
           duration: Duration(milliseconds: 900), // tab animation duration
           gap: 8, // the tab button gap between icon and text
