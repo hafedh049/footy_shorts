@@ -16,7 +16,7 @@ dependencies:
   video_player: ^2.8.1
   flutter_animate: ^4.3.0
   lottie: ^2.7.0
-  adaptive_theme: ^3.4.1
+  #adaptive_theme: ^3.4.1
   icons_plus: ^4.0.0
   get: ^4.6.6
   firebase_auth: ^4.15.0
