@@ -77,7 +77,7 @@ class _SignInState extends State<SignIn> {
                                 controller: _emailController,
                                 style: TextStyle(color: gray.withOpacity(.5), fontSize: 16, fontWeight: FontWeight.w400),
                                 decoration: InputDecoration(
-                                  border: OutlineInputBorder(borderRadius: BorderRadius.circular(12), borderSide: BorderSide(width: .6, color: white.withOpacity(.1))),
+                                  border: OutlineInputBorder(borderRadius: BorderRadius.circular(12), borderSide: BorderSide(width: .6, color: gray.withOpacity(.1))),
                                   hintText: "Email",
                                   contentPadding: const EdgeInsets.all(16),
                                   alignLabelWithHint: true,
