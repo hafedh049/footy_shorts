@@ -30,12 +30,16 @@ class _SignInState extends State<SignIn> {
               autoPlayCurve: Curves.fastOutSlowIn,
               enlargeCenterPage: true,
               enlargeFactor: 0.3,
-              onPageChanged: callbackFunction,
               scrollDirection: Axis.horizontal,
             ),
-            itemBuilder: (BuildContext context, int itemIndex, int pageViewIndex) => Container(
-              child: Text(itemIndex.toString()),
-            ),
+            itemBuilder: (BuildContext context, int itemIndex, int pageViewIndex) {
+              return Image.asset(
+                "assets/pictures/football/${itemIndex + 1}.jpg",
+                fit: BoxFit.cover,
+                height: MediaQuery.sizeOf(context).height * .5,
+              );
+              ;
+            },
           ),
           InfiniteCarousel.builder(
             itemCount: 4,
@@ -43,13 +47,7 @@ class _SignInState extends State<SignIn> {
             velocityFactor: 0.2,
             axisDirection: Axis.horizontal,
             loop: true,
-            itemBuilder: (BuildContext context, int itemIndex, int realIndex) {
-              return Image.asset(
-                "assets/pictures/football/${itemIndex + 1}.jpg",
-                fit: BoxFit.cover,
-                height: MediaQuery.sizeOf(context).height * .5,
-              );
-            },
+            itemBuilder: (BuildContext context, int itemIndex, int realIndex) {},
           ),
           Padding(
             padding: const EdgeInsets.all(16),
