@@ -139,7 +139,7 @@ class _SignUpState extends State<SignUp> {
                     StatefulBuilder(
                       key: _passwordStrengthKey,
                       builder: (BuildContext context, void Function(void Function()) _) {
-                        return Row(children: <Widget>[for (Color strength in _passwordStrength) Expanded(child: AnimatedContainer(duration: 300.ms, height: 1, color: strength, padding: const EdgeInsets.symmetric(horizontal: 4)))]);
+                        return Row(children: <Widget>[for (Color strength in _passwordStrength) Expanded(child: AnimatedContainer(duration: 300.ms, height: 3, color: strength, padding: const EdgeInsets.symmetric(horizontal: 4)))]);
                       },
                     ),
                     const SizedBox(height: 20),
