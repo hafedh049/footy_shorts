@@ -31,7 +31,9 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: GNav(
-        backgroundColor: gray.withOpacity(.1), onTabChange: (int index) {}, selectedIndex: currentPage,
+        backgroundColor: gray.withOpacity(.1),
+        onTabChange: (int index) {},
+        selectedIndex: currentPage,
         rippleColor: gray,
         hoverColor: gray,
         haptic: true,
@@ -41,8 +43,8 @@ class _HomeState extends State<Home> {
         gap: 8,
         activeColor: teal,
         iconSize: 15,
-        tabBackgroundColor: teal.withOpacity(.1), // selected tab background color
-        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20), // navigation bar padding
+        tabBackgroundColor: teal.withOpacity(.1),
+        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
         tabs: <GButton>[
           GButton(icon: FontAwesome.page4, text: 'Reservation', onPressed: () => _screensController.jumpToPage(0)),
           GButton(icon: FontAwesome.highlighter, text: 'Highlight', onPressed: () => _screensController.jumpToPage(1)),
