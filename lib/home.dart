@@ -51,12 +51,12 @@ class _HomeState extends State<Home> {
           GButton(
             icon: FontAwesome.highlighter,
             text: 'Highlight',
-            onPressed: () {},
+            onPressed: () => _screensController.jumpToPage(0),
           ),
           GButton(
             icon: Bootstrap.clock_history,
             text: 'Reservation',
-            onPressed: () {},
+            onPressed: () => _screensController.jumpToPage(0),
           ),
         ],
       ),
