@@ -24,6 +24,7 @@ class Main extends StatelessWidget {
           if (snapshot.hasData) {
             return const Home();
           } else if (snapshot.connectionState == ConnectionState.waiting) {
+            return Scaffold();
           } else {}
         },
       ),
