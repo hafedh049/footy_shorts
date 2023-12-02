@@ -17,11 +17,12 @@ class Main extends StatelessWidget {
     return GetMaterialApp(
       theme: ThemeData.dark(),
       debugShowCheckedModeBanner: false,
-      home: FutureBuilder<>(
-          future: null,
-          builder: (BuildContext context, snapshot) {
-            return const Home();
-          },),
+      home: FutureBuilder<FirebaseApp>(
+        future: null,
+        builder: (BuildContext context, snapshot) {
+          return const Home();
+        },
+      ),
     );
   }
 }
