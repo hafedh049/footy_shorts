@@ -29,11 +29,7 @@ class _SignInState extends State<SignIn> {
               scrollDirection: Axis.horizontal,
             ),
             itemBuilder: (BuildContext context, int itemIndex, int pageViewIndex) {
-              return Image.asset(
-                "assets/pictures/football/${itemIndex + 1}.jpg",
-                fit: BoxFit.cover,
-                height: MediaQuery.sizeOf(context).height * .5,
-              );
+              return Image.asset("assets/pictures/football/${itemIndex + 1}.jpg", fit: BoxFit.cover);
             },
           ),
           Padding(
