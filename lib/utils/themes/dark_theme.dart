@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+/*import 'package:flutter/material.dart';
 import 'package:footy_shorts/utils/globals.dart';
 
 ThemeData darkTheme = ThemeData(
@@ -6,3 +6,4 @@ ThemeData darkTheme = ThemeData(
   primaryColor: teal,
   hintColor: teal,
 );
+*/
