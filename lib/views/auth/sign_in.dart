@@ -36,24 +36,26 @@ class _SignInState extends State<SignIn> {
           Column(
             children: <Widget>[
               SizedBox(height: MediaQuery.sizeOf(context).height * .4),
-              Container(
-                padding: const EdgeInsets.all(16),
-                child: Column(
-                  children: <Widget>[
-                    Row(
-                      children: <Widget>[
-                        Text(userLocalSettings!.get("first_time") ? "Welcome" : "Welcome\nBack", style: const TextStyle(fontSize: 24, color: white, fontWeight: FontWeight.w500)),
-                        const Spacer(),
-                        Container(
-                          decoration: const BoxDecoration(
-                            borderRadius: BorderRadius.only(topLeft: Radius.circular(15), topRight: Radius.circular(15)),
+              Expanded(
+                child: Container(
+                  padding: const EdgeInsets.all(16),
+                  child: Column(
+                    children: <Widget>[
+                      Row(
+                        children: <Widget>[
+                          Text(userLocalSettings!.get("first_time") ? "Welcome" : "Welcome\nBack", style: const TextStyle(fontSize: 24, color: white, fontWeight: FontWeight.w500)),
+                          const Spacer(),
+                          Container(
+                            decoration: const BoxDecoration(
+                              borderRadius: BorderRadius.only(topLeft: Radius.circular(15), topRight: Radius.circular(15)),
+                            ),
+                            padding: const EdgeInsets.all(16),
+                            child: Icon(FontAwesome.hands, color: yellow, size: 25),
                           ),
-                          padding: const EdgeInsets.all(16),
-                          child: Icon(FontAwesome.hands, color: yellow, size: 25),
-                        ),
-                      ],
-                    ),
-                  ],
+                        ],
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ],
