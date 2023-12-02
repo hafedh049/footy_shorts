@@ -33,7 +33,7 @@ class _HomeState extends State<Home> {
           hoverColor: gray, // tab button hover color
           haptic: true, // haptic feedback
           tabBorderRadius: 15,
-          tabActiveBorder: Border.all(color: Colors.black, width: 1), // tab button border
+          // tab button border
           tabBorder: Border.all(color: Colors.grey, width: 1), // tab button border
           tabShadow: [BoxShadow(color: Colors.grey.withOpacity(0.5), blurRadius: 8)], // tab button shadow
           curve: Curves.easeOutExpo, // tab animation curves
