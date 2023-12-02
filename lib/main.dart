@@ -17,7 +17,7 @@ class Main extends StatelessWidget {
     return GetMaterialApp(
       theme: ThemeData.dark(),
       debugShowCheckedModeBanner: false,
-      home: FutureBuilder<FirebaseA>(
+      home: FutureBuilder<>(
           stream: null,
           builder: (context, snapshot) {
             return const Home();
