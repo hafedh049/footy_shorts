@@ -32,7 +32,7 @@ class _HomeState extends State<Home> {
     return Scaffold(
       bottomNavigationBar: GNav(
         backgroundColor: gray.withOpacity(.1),
-        onTabChange: (int index) {},
+        onTabChange: (int index) => _screensController.jumpToPage(0),
         selectedIndex: currentPage,
         rippleColor: gray,
         hoverColor: gray,
@@ -46,7 +46,10 @@ class _HomeState extends State<Home> {
         tabBackgroundColor: teal.withOpacity(.1),
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
         tabs: <GButton>[
-          GButton(icon: FontAwesome.page4, text: 'Reservation', onPressed: () => _screensController.jumpToPage(0)),
+          GButton(
+            icon: FontAwesome.page4,
+            text: 'Reservation',
+          ),
           GButton(icon: FontAwesome.highlighter, text: 'Highlight', onPressed: () => _screensController.jumpToPage(1)),
           GButton(icon: Bootstrap.clock_history, text: 'Reservation', onPressed: () => _screensController.jumpToPage(2)),
         ],
