@@ -6,7 +6,6 @@ const Color teal = Color.fromARGB(255, 0, 207, 159);
 const Color blue = Color.fromARGB(255, 0, 128, 178);
 const Color gray = Color.fromARGB(255, 51, 56, 66);
 const Color white = Color.fromARGB(255, 204, 204, 195);
-const Color dark = Color.fromARGB(255, 46, 56, 66);
 const Color transparent = Colors.transparent;
 Color yellow = Colors.yellow.shade600;
 
