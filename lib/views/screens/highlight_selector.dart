@@ -20,7 +20,7 @@ class _VideoSelectorState extends State<VideoSelector> {
               highlightColor: transparent,
               focusColor: transparent,
               splashColor: transparent,
-              onTap: () {},
+              onTap: () async {},
               child: Column(
                 children: <Widget>[
                   LottieBuilder.asset("assets/lotties/add.json", width: 60, height: 60),
