@@ -41,7 +41,7 @@ class _SignInState extends State<SignIn> {
                   children: <Widget>[
                     Row(
                       children: <Widget>[
-                        Text(userLocalSettings!.get("first_time") ? "Welcome" : ""),
+                        Text(userLocalSettings!.get("first_time") ? "Welcome" : "Welcome"),
                         const Spacer(),
                       ],
                     ),
