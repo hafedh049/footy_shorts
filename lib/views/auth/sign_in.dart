@@ -28,73 +28,76 @@ class _SignInState extends State<SignIn> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Stack(
-        children: <Widget>[
-          CarouselSlider.builder(
-            itemCount: 4,
-            options: CarouselOptions(
-              viewportFraction: 1,
-              height: MediaQuery.sizeOf(context).height * .6,
-              initialPage: 0,
-              autoPlay: true,
-              autoPlayInterval: 2.seconds,
-              autoPlayAnimationDuration: 2.seconds,
-              autoPlayCurve: Curves.fastOutSlowIn,
-              enlargeFactor: 0,
+      body: GestureDetector(
+        onTap: () => FocusScope.of(context).unfocus(),
+        child: Stack(
+          children: <Widget>[
+            CarouselSlider.builder(
+              itemCount: 4,
+              options: CarouselOptions(
+                viewportFraction: 1,
+                height: MediaQuery.sizeOf(context).height * .6,
+                initialPage: 0,
+                autoPlay: true,
+                autoPlayInterval: 2.seconds,
+                autoPlayAnimationDuration: 2.seconds,
+                autoPlayCurve: Curves.fastOutSlowIn,
+                enlargeFactor: 0,
+              ),
+              itemBuilder: (BuildContext context, int itemIndex, int pageViewIndex) {
+                return Image.asset("assets/pictures/football/${itemIndex + 1}.jpg", fit: BoxFit.cover);
+              },
             ),
-            itemBuilder: (BuildContext context, int itemIndex, int pageViewIndex) {
-              return Image.asset("assets/pictures/football/${itemIndex + 1}.jpg", fit: BoxFit.cover);
-            },
-          ),
-          Column(
-            children: <Widget>[
-              SizedBox(height: MediaQuery.sizeOf(context).height * .4),
-              Expanded(
-                child: Container(
-                  decoration: const BoxDecoration(color: gray, borderRadius: BorderRadius.only(topLeft: Radius.circular(25), topRight: Radius.circular(25))),
-                  padding: const EdgeInsets.all(16),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: <Widget>[
-                      Row(
-                        children: <Widget>[
-                          Text(userLocalSettings!.get("first_time") ? "Welcome" : "Welcome\nBack", style: const TextStyle(fontSize: 24, color: white, fontWeight: FontWeight.w500)),
-                          const Spacer(),
-                          Container(
-                            decoration: BoxDecoration(color: white.withOpacity(.2), shape: BoxShape.circle),
-                            padding: const EdgeInsets.all(16),
-                            child: Icon(FontAwesome.hands, color: yellow, size: 25),
-                          ),
-                        ],
-                      ),
-                      const SizedBox(height: 20),
-                      Expanded(
-                        child: Form(
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: <Widget>[
-                              TextFormField(
-                                controller: _emailController,
-                                style: const TextStyle(color: white, fontSize: 16, fontWeight: FontWeight.w400),
-                                decoration: InputDecoration(
-                                  border: OutlineInputBorder(borderRadius: BorderRadius.circular(12), borderSide: BorderSide(width: .6, color: gray.withOpacity(.1))),
-                                  focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(12), borderSide: BorderSide(width: .8, color: white.withOpacity(.6))),
-                                  hintText: "Email",
-                                  contentPadding: const EdgeInsets.all(16),
-                                  hintStyle: TextStyle(color: white.withOpacity(.5), fontSize: 16, fontWeight: FontWeight.w400),
+            Column(
+              children: <Widget>[
+                SizedBox(height: MediaQuery.sizeOf(context).height * .4),
+                Expanded(
+                  child: Container(
+                    decoration: const BoxDecoration(color: gray, borderRadius: BorderRadius.only(topLeft: Radius.circular(25), topRight: Radius.circular(25))),
+                    padding: const EdgeInsets.all(16),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        Row(
+                          children: <Widget>[
+                            Text(userLocalSettings!.get("first_time") ? "Welcome" : "Welcome\nBack", style: const TextStyle(fontSize: 24, color: white, fontWeight: FontWeight.w500)),
+                            const Spacer(),
+                            Container(
+                              decoration: BoxDecoration(color: white.withOpacity(.2), shape: BoxShape.circle),
+                              padding: const EdgeInsets.all(16),
+                              child: Icon(FontAwesome.hands, color: yellow, size: 25),
+                            ),
+                          ],
+                        ),
+                        const SizedBox(height: 20),
+                        Expanded(
+                          child: Form(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: <Widget>[
+                                TextFormField(
+                                  controller: _emailController,
+                                  style: const TextStyle(color: white, fontSize: 16, fontWeight: FontWeight.w400),
+                                  decoration: InputDecoration(
+                                    border: OutlineInputBorder(borderRadius: BorderRadius.circular(12), borderSide: BorderSide(width: .6, color: gray.withOpacity(.1))),
+                                    focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(12), borderSide: BorderSide(width: .8, color: white.withOpacity(.6))),
+                                    hintText: "Email",
+                                    contentPadding: const EdgeInsets.all(16),
+                                    hintStyle: TextStyle(color: white.withOpacity(.5), fontSize: 16, fontWeight: FontWeight.w400),
+                                  ),
                                 ),
-                              ),
-                            ],
+                              ],
+                            ),
                           ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 ),
-              ),
-            ],
-          ),
-        ],
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }
