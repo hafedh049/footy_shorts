@@ -82,7 +82,7 @@ class _SignInState extends State<SignIn> {
                                   contentPadding: const EdgeInsets.all(8),
                                   alignLabelWithHint: true,
                                   focusColor: gray,
-                                  hintStyle: TextStyle(color: gray.withOpacity(.5), fontSize: 16, fontWeight: FontWeight.w400),
+                                  hintStyle: TextStyle(color: white.withOpacity(.5), fontSize: 16, fontWeight: FontWeight.w400),
                                 ),
                               ),
                             ],
