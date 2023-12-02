@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:footy_shorts/utils/globals.dart';
 import 'package:icons_plus/icons_plus.dart';
 
@@ -15,10 +16,16 @@ class _SignUpState extends State<SignUp> {
   final TextEditingController _confirmPasswordController = TextEditingController();
   final TextEditingController _usernameController = TextEditingController();
 
+  final GlobalKey<State> _passwordStrengthKey = GlobalKey<State>();
+
+  final List<Color> _passwordStrength = List<Color>.generate(3, (int index) => white.withOpacity(.5));
+
   bool _passwordState = false;
   bool _confirmPasswordState = false;
   bool _emailState = false;
   bool _usernameState = false;
+
+  void _computeStrength() {}
 
   @override
   void dispose() {
@@ -86,9 +93,7 @@ class _SignUpState extends State<SignUp> {
                     StatefulBuilder(
                       builder: (BuildContext context, void Function(void Function()) _) {
                         return TextFormField(
-                          onChanged: (String value) {
-                            _(() => _usernameState = _usernameController.text.trim().isNotEmpty);
-                          },
+                          onChanged: (String value) => _(() => _usernameState = _usernameController.text.trim().isNotEmpty),
                           controller: _usernameController,
                           style: const TextStyle(color: white, fontSize: 16, fontWeight: FontWeight.w400),
                           decoration: InputDecoration(
@@ -116,6 +121,7 @@ class _SignUpState extends State<SignUp> {
                       builder: (BuildContext context, void Function(void Function()) _) {
                         return TextFormField(
                           controller: _passwordController,
+                          onChanged: (String text) => _passwordStrengthKey.currentState!.setState(() => _computeStrength()),
                           obscureText: !_passwordState,
                           style: const TextStyle(color: white, fontSize: 16, fontWeight: FontWeight.w400),
                           decoration: InputDecoration(
@@ -127,6 +133,13 @@ class _SignUpState extends State<SignUp> {
                             hintStyle: TextStyle(color: white.withOpacity(.5), fontSize: 16, fontWeight: FontWeight.w400),
                           ),
                         );
+                      },
+                    ),
+                    const SizedBox(height: 10),
+                    StatefulBuilder(
+                      key: _passwordStrengthKey,
+                      builder: (BuildContext context, void Function(void Function()) _) {
+                        return Row(children: <Widget>[for (Color strength in _passwordStrength) Expanded(child: AnimatedContainer(duration: 300.ms, height: 1, color: strength, padding: const EdgeInsets.symmetric(horizontal: 4)))]);
                       },
                     ),
                     const SizedBox(height: 20),
