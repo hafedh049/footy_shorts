@@ -39,7 +39,7 @@ class _VideoSelectorState extends State<VideoSelector> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 LottieBuilder.asset("assets/lotties/add.json", width: 60, height: 60),
-                const Text("Import Video", style: TextStyle(color: teal, fontSize: 16, fontWeight: FontWeight.w400)),
+                const Text("Import Video", style: TextStyle(color: teal, fontSize: 16, fontWeight: FontWeight.w500)),
               ],
             ),
           )
