@@ -17,7 +17,7 @@ class _SignInState extends State<SignIn> {
 
   @override
   void initState() {
-    if (userLocalSettings!.get("")) {}
+    if (userLocalSettings!.get("first_time")) {}
     super.initState();
   }
 
