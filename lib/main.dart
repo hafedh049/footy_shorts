@@ -26,7 +26,9 @@ class Main extends StatelessWidget {
             return const Home();
           } else if (snapshot.connectionState == ConnectionState.waiting) {
             return Scaffold(body: Center(child: LottieBuilder.asset("assets/lotties/load.json", width: 80, height: 80)));
-          } else {}
+          } else {
+            Scaffold(body: Center(child: LottieBuilder.asset("assets/lotties/load.json", width: 80, height: 80)));
+          }
         },
       ),
     );
