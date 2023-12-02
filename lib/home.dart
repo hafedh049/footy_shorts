@@ -63,7 +63,7 @@ class _HomeState extends State<Home> {
               text: 'Reservation',
               onPressed: () {},
             ),
-          ]),
+          ]?),
       body: PageView.builder(
         onPageChanged: (int index) {},
         itemCount: 3,
