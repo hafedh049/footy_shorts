@@ -18,7 +18,7 @@ class Main extends StatelessWidget {
       theme: ThemeData.dark(),
       debugShowCheckedModeBanner: false,
       home: FutureBuilder<>(
-          stream: null,
+          future: null,
           builder: (context, snapshot) {
             return const Home();
           },),
