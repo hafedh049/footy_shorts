@@ -18,18 +18,11 @@ class Main extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AdaptiveTheme(
-      initial: userLocalSettings!.get('theme') == 'dark' ? AdaptiveThemeMode.dark : AdaptiveThemeMode.light,
-      dark: darkTheme,
-      light: lightTheme,
-      builder: (ThemeData light, ThemeData dark) {
-        return GetMaterialApp(
-          theme: light,
-          darkTheme: dark,
-          debugShowCheckedModeBanner: false,
-          home: const Home(),
-        );
-      },
+    returnGetMaterialApp(
+      theme: light,
+      darkTheme: dark,
+      debugShowCheckedModeBanner: false,
+      home: const Home(),
     );
   }
 }
