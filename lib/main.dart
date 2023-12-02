@@ -4,7 +4,6 @@ import 'package:footy_shorts/utils/globals.dart';
 import 'package:footy_shorts/utils/methods.dart';
 import 'package:footy_shorts/utils/themes/dark_theme.dart';
 import 'package:footy_shorts/utils/themes/light_theme.dart';
-import 'package:get/get.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
