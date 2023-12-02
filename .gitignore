@@ -16,6 +16,7 @@ doc/api/
 android/
 ios/
 auto_commit.py
+android\app\google-services.json
 
 # Avoid committing generated Javascript files:
 *.dart.js
