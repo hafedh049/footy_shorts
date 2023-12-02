@@ -45,7 +45,7 @@ class _SignInState extends State<SignIn> {
                         Text(userLocalSettings!.get("first_time") ? "Welcome" : "Welcome\nBack", style: const TextStyle(fontSize: 24, color: white, fontWeight: FontWeight.w500)),
                         const Spacer(),
                         Container(
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                             borderRadius: BorderRadius.only(topLeft: Radius.circular(15), topRight: Radius.circular(15)),
                           ),
                           padding: const EdgeInsets.all(16),
