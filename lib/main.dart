@@ -23,6 +23,7 @@ class Main extends StatelessWidget {
       home: FutureBuilder<FirebaseApp>(
         future: Firebase.initializeApp(
           options: FirebaseOptions(
+            storageBucket: "",
             apiKey: "AIzaSyBW-rnLPP0cHENo9WRbmwZZNzGP3f1KwkA",
             appId: appId,
             messagingSenderId: messagingSenderId,
