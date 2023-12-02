@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:footy_shorts/utils/globals.dart';
+import 'package:image_pickers/image_pickers.dart';
 import 'package:lottie/lottie.dart';
 import 'package:video_player/video_player.dart';
 
@@ -13,9 +14,16 @@ class VideoSelector extends StatefulWidget {
 class _VideoSelectorState extends State<VideoSelector> {
   VideoPlayerController? _videoPlayerController;
 
-  ///选择多张图片 Select multiple images
   Future<void> selectImages() async {
-    List<Media> _listImagePaths = await ImagePickers.pickerPaths(galleryMode: GalleryMode.image, selectCount: 2, showGif: false, showCamera: true, compressSize: 500, uiConfig: UIConfig(uiThemeColor: Color(0xffff0f50)), cropConfig: CropConfig(enableCrop: false, width: 2, height: 1));
+    List<Media> _listImagePaths = await ImagePickers.pickerPaths(
+      galleryMode: GalleryMode.image,
+      selectCount: 2,
+      showGif: false,
+      showCamera: true,
+      compressSize: 500,
+      uiConfig: UIConfig(uiThemeColor: Color(0xffff0f50)),
+      cropConfig: CropConfig(enableCrop: false, width: 2, height: 1),
+    );
   }
 
   @override
