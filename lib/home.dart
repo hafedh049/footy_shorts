@@ -59,9 +59,10 @@ class _HomeState extends State<Home> {
               onPressed: () {},
             ),
             GButton(
-              icon: LineIcons.user,
-              text: 'Profile',
-            )
+              icon: FontAwesome.page4,
+              text: 'Reservation',
+              onPressed: () {},
+            ),
           ]),
       body: PageView.builder(
         onPageChanged: (int index) {},
