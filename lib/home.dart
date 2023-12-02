@@ -56,7 +56,7 @@ class _HomeState extends State<Home> {
           GButton(
             icon: Bootstrap.clock_history,
             text: 'Reservation',
-            onPressed: () => _screensController.jumpToPage(0),
+            onPressed: () => _screensController.jumpToPage(2),
           ),
         ],
       ),
