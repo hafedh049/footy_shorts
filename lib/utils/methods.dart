@@ -15,7 +15,7 @@ Future<bool> loadUserLocalSettings() async {
 
 Future<bool> load() async {
   try {
-    Firebase.initializeApp(
+    await Firebase.initializeApp(
       options: const FirebaseOptions(
         storageBucket: "footy-shorts.appspot.com",
         apiKey: "AIzaSyBW-rnLPP0cHENo9WRbmwZZNzGP3f1KwkA",
