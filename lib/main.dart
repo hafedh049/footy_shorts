@@ -20,7 +20,7 @@ class Main extends StatelessWidget {
       home: FutureBuilder<FirebaseApp>(
         future: null,
         builder: (BuildContext context,AsyncSnapshot<FirebaseApp> snapshot) {
-          if(){return const Home();}
+          if(snapshot){return const Home();}
           else if(){}
           else {}
         },
