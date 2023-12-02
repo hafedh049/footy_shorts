@@ -79,7 +79,7 @@ class _SignInState extends State<SignIn> {
                                 decoration: InputDecoration(
                                   border: OutlineInputBorder(borderRadius: BorderRadius.circular(10), borderSide: BorderSide(width: .5, color: gray.withOpacity(.5))),
                                   hintText: "Email",
-                                  contentPadding: const EdgeInsets.all(8),
+                                  contentPadding: const EdgeInsets.all(16),
                                   alignLabelWithHint: true,
                                   focusColor: gray,
                                   hintStyle: TextStyle(color: white.withOpacity(.5), fontSize: 16, fontWeight: FontWeight.w400),
