@@ -43,11 +43,7 @@ class _HomeState extends State<Home> {
         tabBackgroundColor: teal.withOpacity(.1), // selected tab background color
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 5), // navigation bar padding
         tabs: <GButton>[
-          GButton(
-            icon: FontAwesome.page4,
-            text: 'Reservation',
-            onPressed: () => _screensController.jumpToPage(0),
-          ),
+          GButton(icon: FontAwesome.page4, text: 'Reservation', onPressed: () => _screensController.jumpToPage(0)),
           GButton(
             icon: FontAwesome.highlighter,
             text: 'Highlight',
