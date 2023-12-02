@@ -15,7 +15,7 @@ class _VideoSelectorState extends State<VideoSelector> {
   VideoPlayerController? _videoPlayerController;
 
   Future<void> selectImages() async {
-    List<Media> _listImagePaths = await ImagePickers.pickerPaths(
+    List<Media> imagesPaths = await ImagePickers.pickerPaths(
       galleryMode: GalleryMode.image,
       selectCount: 2,
       showGif: false,
