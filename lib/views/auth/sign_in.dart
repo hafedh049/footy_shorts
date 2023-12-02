@@ -39,7 +39,9 @@ class _SignInState extends State<SignIn> {
                 child: Column(
                   children: <Widget>[
                     Row(
-                      children: <Widget>[const Spacer()],
+                      children: <Widget>[
+                        const Spacer(),
+                      ],
                     ),
                   ],
                 ),
