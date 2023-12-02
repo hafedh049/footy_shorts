@@ -25,7 +25,6 @@ class _SignInState extends State<SignIn> {
               autoPlayAnimationDuration: 2.seconds,
               autoPlayCurve: Curves.fastOutSlowIn,
               enlargeCenterPage: true,
-              scrollDirection: Axis.horizontal,
             ),
             itemBuilder: (BuildContext context, int itemIndex, int pageViewIndex) {
               return Image.asset("assets/pictures/football/${itemIndex + 1}.jpg", fit: BoxFit.cover);
