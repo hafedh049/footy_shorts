@@ -18,6 +18,7 @@ class _SignInState extends State<SignIn> {
           CarouselSlider.builder(
             itemCount: 4,
             options: CarouselOptions(
+              viewportFraction: 1,
               height: MediaQuery.sizeOf(context).height * .5,
               initialPage: 0,
               autoPlay: true,
