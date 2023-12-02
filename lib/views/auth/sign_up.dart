@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:footy_shorts/utils/globals.dart';
+import 'package:get/get.dart';
 import 'package:icons_plus/icons_plus.dart';
 
 class SignUp extends StatefulWidget {
@@ -25,7 +26,59 @@ class _SignUpState extends State<SignUp> {
   bool _emailState = false;
   bool _usernameState = false;
 
-  void _computeStrength() {}
+  void _computeStrength(String password) {
+    int score = 0;
+
+    // Criteria weights
+    int lengthWeight = 2;
+    int upperCaseWeight = 2;
+    int lowerCaseWeight = 2;
+    int digitWeight = 2;
+    int specialCharWeight = 3;
+
+    // Length check
+    if (password.length >= 8) {
+      score += lengthWeight;
+    }
+
+    // Check for uppercase letters
+    if (RegExp(r'[A-Z]').hasMatch(password)) {
+      score += upperCaseWeight;
+    }
+
+    // Check for lowercase letters
+    if (RegExp(r'[a-z]').hasMatch(password)) {
+      score += lowerCaseWeight;
+    }
+
+    // Check for digits
+    if (RegExp(r'[0-9]').hasMatch(password)) {
+      score += digitWeight;
+    }
+
+    // Check for special characters
+    if (RegExp(r'[!@#\$%\^&\*(),.?":{}|<>]').hasMatch(password)) {
+      score += specialCharWeight;
+    }
+
+    if (score < 6) {
+      _passwordStrength.fillRange(0, 1, teal);
+    } else if (score < 9) {
+    } else if (score < 12) {
+    } else {}
+  }
+
+  Future<void> _showInfo() async {
+    await showModalBottomSheet(
+      context: context,
+      builder: (BuildContext context) => Padding(
+        padding: const EdgeInsets.all(24),
+        child: Column(
+          children: <Widget>[],
+        ),
+      ),
+    );
+  }
 
   @override
   void dispose() {
@@ -112,7 +165,7 @@ class _SignUpState extends State<SignUp> {
                       children: <Widget>[
                         const Text.rich(TextSpan(children: <TextSpan>[TextSpan(text: "Password", style: TextStyle(fontSize: 15, fontWeight: FontWeight.w500)), TextSpan(text: " *", style: TextStyle(fontSize: 15, fontWeight: FontWeight.w500, color: teal))])),
                         const Spacer(),
-                        IconButton(onPressed: () {}, icon: const Icon(FontAwesome.circle_info, size: 15, color: teal)),
+                        IconButton(highlightColor: transparent, splashColor: transparent, hoverColor: transparent, onPressed: () async => await _showInfo(), icon: const Icon(FontAwesome.circle_info, size: 25, color: teal)),
                       ],
                     ),
                     const SizedBox(height: 10),
@@ -185,7 +238,7 @@ class _SignUpState extends State<SignUp> {
                 highlightColor: transparent,
                 splashColor: transparent,
                 hoverColor: transparent,
-                onTap: () {},
+                onTap: () => Get.back(),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
