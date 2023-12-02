@@ -10,3 +10,5 @@ const Color transparent = Colors.transparent;
 
 //VARS
 Box? userLocalSettings;
+
+int currentPage = 0;
