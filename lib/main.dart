@@ -26,7 +26,7 @@ class Main extends StatelessWidget {
             apiKey: apiKey,
             appId: appId,
             messagingSenderId: messagingSenderId,
-            projectId: projectId,
+            projectId: "footy-shorts",
           ),
         ),
         builder: (BuildContext context, AsyncSnapshot<FirebaseApp> snapshot) {
