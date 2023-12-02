@@ -81,7 +81,6 @@ class _SignInState extends State<SignIn> {
                                   focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(12), borderSide: BorderSide(width: .8, color: white.withOpacity(.6))),
                                   hintText: "Email",
                                   contentPadding: const EdgeInsets.all(16),
-                                  focusColor: gray,
                                   hintStyle: TextStyle(color: white.withOpacity(.5), fontSize: 16, fontWeight: FontWeight.w400),
                                 ),
                               ),
