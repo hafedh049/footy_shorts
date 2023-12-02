@@ -135,7 +135,9 @@ class _SignUpState extends State<SignUp> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              const SizedBox(height: 80),
+              const SizedBox(height: 40),
+              IconButton(splashColor: teal, onPressed: () => Get.back(), icon: const Icon(FontAwesome.chevron_left, color: teal)),
+              const SizedBox(height: 20),
               Form(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
