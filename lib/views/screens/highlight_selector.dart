@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:footy_shorts/utils/globals.dart';
 import 'package:lottie/lottie.dart';
 import 'package:video_player/video_player.dart';
 
