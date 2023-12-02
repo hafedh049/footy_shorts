@@ -31,39 +31,40 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: GNav(
-          rippleColor: gray, // tab button ripple color when pressed
-          hoverColor: gray, // tab button hover color
-          haptic: true, // haptic feedback
-          tabBorderRadius: 15, // tab button border
-          curve: Curves.linear, // tab animation curves
-          duration: 500.ms, // tab animation duration
-          gap: 8, // the tab button gap between icon and text
-          activeColor: teal, // selected icon and text color
-          iconSize: 15, // tab button icon size
-          tabBackgroundColor: teal.withOpacity(.1), // selected tab background color
-          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 5), // navigation bar padding
-          tabs: <GButton>[
-            GButton(
-              icon: FontAwesome.page4,
-              text: 'Reservation',
-              onPressed: () {},
-            ),
-            GButton(
-              icon: FontAwesome.page4,
-              text: 'Reservation',
-              onPressed: () {},
-            ),
-            GButton(
-              icon: FontAwesome.page4,
-              text: 'Reservation',
-              onPressed: () {},
-            ),
-            GButton(
-              icon: FontAwesome.page4,
-              text: 'Reservation',
-              onPressed: () {},
-            ),
-          ]?),
+        rippleColor: gray, // tab button ripple color when pressed
+        hoverColor: gray, // tab button hover color
+        haptic: true, // haptic feedback
+        tabBorderRadius: 15, // tab button border
+        curve: Curves.linear, // tab animation curves
+        duration: 500.ms, // tab animation duration
+        gap: 8, // the tab button gap between icon and text
+        activeColor: teal, // selected icon and text color
+        iconSize: 15, // tab button icon size
+        tabBackgroundColor: teal.withOpacity(.1), // selected tab background color
+        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 5), // navigation bar padding
+        tabs: <GButton>[
+          GButton(
+            icon: FontAwesome.page4,
+            text: 'Reservation',
+            onPressed: () {},
+          ),
+          GButton(
+            icon: FontAwesome.page4,
+            text: 'Reservation',
+            onPressed: () {},
+          ),
+          GButton(
+            icon: FontAwesome.page4,
+            text: 'Reservation',
+            onPressed: () {},
+          ),
+          GButton(
+            icon: FontAwesome.page4,
+            text: 'Reservation',
+            onPressed: () {},
+          ),
+        ],
+      ),
       body: PageView.builder(
         onPageChanged: (int index) {},
         itemCount: 3,
