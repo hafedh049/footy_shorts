@@ -50,7 +50,7 @@ class _HomeState extends State<Home> {
           ),
           GButton(
             icon: FontAwesome.page4,
-            text: 'Reservation',
+            text: 'Highlight',
             onPressed: () {},
           ),
           GButton(
