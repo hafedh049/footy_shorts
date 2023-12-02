@@ -17,7 +17,7 @@ class _VideoSelectorState extends State<VideoSelector> {
         ? Center(
             child: Column(
               children: <Widget>[
-                LottieBuilder.asset("assets/lotties/"),
+                LottieBuilder.asset("assets/lotties/add.json"),
               ],
             ),
           )
