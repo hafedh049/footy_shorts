@@ -44,11 +44,7 @@ class _HomeState extends State<Home> {
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 5), // navigation bar padding
         tabs: <GButton>[
           GButton(icon: FontAwesome.page4, text: 'Reservation', onPressed: () => _screensController.jumpToPage(0)),
-          GButton(
-            icon: FontAwesome.highlighter,
-            text: 'Highlight',
-            onPressed: () => _screensController.jumpToPage(1),
-          ),
+          GButton(icon: FontAwesome.highlighter, text: 'Highlight', onPressed: () => _screensController.jumpToPage(1)),
           GButton(
             icon: Bootstrap.clock_history,
             text: 'Reservation',
