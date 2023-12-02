@@ -43,6 +43,7 @@ class _SignInState extends State<SignIn> {
                       children: <Widget>[
                         Text(userLocalSettings!.get("first_time") ? "Welcome" : "Welcome\nBack", style: const TextStyle(fontSize: 24, color: white, fontWeight: FontWeight.w500)),
                         const Spacer(),
+                        Container(padding: const EdgeInsets.all(16)),
                       ],
                     ),
                   ],
