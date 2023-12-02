@@ -34,7 +34,7 @@ class _SignInState extends State<SignIn> {
             loop: true,
             itemBuilder: (BuildContext context, int itemIndex, int realIndex) {
               return Image.asset(
-                "assets/images/foot/$itemIndex.jpg",
+                "assets/pictures/football/$itemIndex.jpg",
                 fit: BoxFit.cover,
                 height: MediaQuery.sizeOf(context).height * .5,
               );
