@@ -11,7 +11,7 @@ class _SignInState extends State<SignIn> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
+      body: Stack(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[],
       ),
