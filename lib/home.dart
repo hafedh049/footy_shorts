@@ -49,7 +49,7 @@ class _HomeState extends State<Home> {
             onPressed: () {},
           ),
           GButton(
-            icon: FontAwesome.page4,
+            icon: FontAwesome.highlighter,
             text: 'Highlight',
             onPressed: () {},
           ),
