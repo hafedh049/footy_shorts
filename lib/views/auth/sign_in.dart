@@ -23,7 +23,7 @@ class _SignInState extends State<SignIn> {
       body: Stack(
         children: <Widget>[
           InfiniteCarousel.builder(
-            itemCount: 10,
+            itemCount: 4,
             itemExtent: 120,
             center: true,
             anchor: 0.0,
