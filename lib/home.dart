@@ -41,7 +41,7 @@ class _HomeState extends State<Home> {
           iconSize: 15, // tab button icon size
           tabBackgroundColor: teal.withOpacity(.1), // selected tab background color
           padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 5), // navigation bar padding
-          tabs: [
+          tabs: <GButton>[
             GButton(
               icon: LineIcons.home,
               text: 'Home',
