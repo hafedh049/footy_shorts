@@ -26,7 +26,6 @@ class _SignInState extends State<SignIn> {
             itemCount: 4,
             itemExtent: MediaQuery.sizeOf(context).width,
             center: true,
-            anchor: 0.0,
             velocityFactor: 0.2,
             onIndexChanged: (index) {},
             controller: _carousselController,
