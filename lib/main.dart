@@ -1,3 +1,4 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:footy_shorts/home.dart';
 import 'package:footy_shorts/utils/methods.dart';
@@ -19,10 +20,11 @@ class Main extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: FutureBuilder<FirebaseApp>(
         future: null,
-        builder: (BuildContext context,AsyncSnapshot<FirebaseApp> snapshot) {
-          if(snapshot.hasData){return const Home();}
-          else if(){}
-          else {}
+        builder: (BuildContext context, AsyncSnapshot<FirebaseApp> snapshot) {
+          if (snapshot.hasData) {
+            return const Home();
+          } else if (snapshot.connectionState == ConnectionState.waiting) {
+          } else {}
         },
       ),
     );
