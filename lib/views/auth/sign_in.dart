@@ -36,6 +36,7 @@ class _SignInState extends State<SignIn> {
               return Image.asset(
                 "assets/images/foot/$itemIndex.png",
                 fit: BoxFit.cover,
+                height: MediaQuery.sizeOf(context).height * .5,
               );
             },
           ),
