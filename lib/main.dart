@@ -26,7 +26,7 @@ class Main extends StatelessWidget {
             storageBucket: "footy-shorts.appspot.com",
             apiKey: "AIzaSyBW-rnLPP0cHENo9WRbmwZZNzGP3f1KwkA",
             appId: "1:731346863322:android:d7391a9de82ddcc03c91e3",
-            messagingSenderId: "",
+            messagingSenderId: "731346863322	",
             projectId: "footy-shorts",
           ),
         ),
