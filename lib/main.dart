@@ -19,7 +19,7 @@ class Main extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: FutureBuilder<FirebaseApp>(
         future: null,
-        builder: (BuildContext context, snapshot) {
+        builder: (BuildContext context,AsyncSnapshot<FirebaseApp> snapshot) {
           return const Home();
         },
       ),
