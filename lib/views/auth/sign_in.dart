@@ -9,14 +9,6 @@ class SignIn extends StatefulWidget {
 }
 
 class _SignInState extends State<SignIn> {
-  final ScrollController _carousselController = ScrollController();
-
-  @override
-  void dispose() {
-    _carousselController.dispose();
-    super.dispose();
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,8 +19,6 @@ class _SignInState extends State<SignIn> {
             itemExtent: MediaQuery.sizeOf(context).width,
             center: true,
             velocityFactor: 0.2,
-            onIndexChanged: (index) {},
-            controller: _carousselController,
             axisDirection: Axis.horizontal,
             loop: true,
             itemBuilder: (BuildContext context, int itemIndex, int realIndex) {
