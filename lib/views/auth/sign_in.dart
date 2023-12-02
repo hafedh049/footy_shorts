@@ -1,5 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:footy_shorts/home.dart';
 import 'package:footy_shorts/utils/globals.dart';
 import 'package:footy_shorts/views/auth/sign_up.dart';
 import 'package:get/get.dart';
@@ -120,11 +121,16 @@ class _SignInState extends State<SignIn> {
                           ),
                         ),
                         const SizedBox(height: 40),
-                        Container(
-                          decoration: BoxDecoration(color: teal, borderRadius: BorderRadius.circular(12)),
-                          width: MediaQuery.sizeOf(context).width,
-                          padding: const EdgeInsets.all(20),
-                          child: const Center(child: Text("Sign in", style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500))),
+                        InkWell(
+                          onTap: () async {
+                            await Get.to(const Home());
+                          },
+                          child: Container(
+                            decoration: BoxDecoration(color: teal, borderRadius: BorderRadius.circular(12)),
+                            width: MediaQuery.sizeOf(context).width,
+                            padding: const EdgeInsets.all(20),
+                            child: const Center(child: Text("Sign in", style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500))),
+                          ),
                         ),
                         const SizedBox(height: 20),
                         InkWell(
