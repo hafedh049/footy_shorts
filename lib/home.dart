@@ -54,7 +54,7 @@ class _HomeState extends State<Home> {
             onPressed: () {},
           ),
           GButton(
-            icon: FontAwesome.page4,
+            icon: Bootstrap.clock_history,
             text: 'Reservation',
             onPressed: () {},
           ),
