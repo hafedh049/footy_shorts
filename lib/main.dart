@@ -17,7 +17,11 @@ class Main extends StatelessWidget {
     return GetMaterialApp(
       theme: ThemeData.dark(),
       debugShowCheckedModeBanner: false,
-      home: const Home(),
+      home: FutureBuilder<Object>(
+          stream: null,
+          builder: (context, snapshot) {
+            return const Home();
+          }),
     );
   }
 }
