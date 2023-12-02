@@ -14,14 +14,12 @@ class _SignInState extends State<SignIn> {
     return Scaffold(
       body: Stack(
         children: <Widget>[
-
-CarouselSlider.builder(
-  itemCount: 15,
-  itemBuilder: (BuildContext context, int itemIndex, int pageViewIndex) =>
-    Container(
-      child: Text(itemIndex.toString()),
-    ),
-)
+          CarouselSlider.builder(
+            itemCount: 15,
+            itemBuilder: (BuildContext context, int itemIndex, int pageViewIndex) => Container(
+              child: Text(itemIndex.toString()),
+            ),
+          ),
           InfiniteCarousel.builder(
             itemCount: 4,
             itemExtent: MediaQuery.sizeOf(context).width,
