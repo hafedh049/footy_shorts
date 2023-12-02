@@ -24,7 +24,7 @@ class _VideoSelectorState extends State<VideoSelector> {
       uiConfig: UIConfig(uiThemeColor: teal),
       cropConfig: CropConfig(enableCrop: false, width: 2, height: 1),
     );
-    print(imagesPaths);
+    debugPrint(imagesPaths.toString());
   }
 
   @override
