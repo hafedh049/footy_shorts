@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:footy_shorts/utils/globals.dart';
 import 'package:footy_shorts/views/screens/highlight_selector.dart';
 import 'package:footy_shorts/views/screens/reservation.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
@@ -28,8 +29,8 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: GNav(
-          rippleColor: Colors.grey[800], // tab button ripple color when pressed
-          hoverColor: Colors.grey[700], // tab button hover color
+          rippleColor: gray, // tab button ripple color when pressed
+          hoverColor: gray, // tab button hover color
           haptic: true, // haptic feedback
           tabBorderRadius: 15,
           tabActiveBorder: Border.all(color: Colors.black, width: 1), // tab button border
