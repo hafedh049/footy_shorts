@@ -17,9 +17,9 @@ class _VideoSelectorState extends State<VideoSelector> {
   Future<void> _selectVideos() async {
     List<Media> imagesPaths = await ImagePickers.pickerPaths(
       galleryMode: GalleryMode.video,
-      selectCount: 2,
+      selectCount: 1,
       showGif: false,
-      showCamera: true,
+      showCamera: false,
       compressSize: 500,
       uiConfig: UIConfig(uiThemeColor: teal),
       cropConfig: CropConfig(enableCrop: false, width: 2, height: 1),
