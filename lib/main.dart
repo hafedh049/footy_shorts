@@ -4,6 +4,7 @@ import 'package:footy_shorts/utils/globals.dart';
 import 'package:footy_shorts/utils/methods.dart';
 import 'package:footy_shorts/utils/themes/dark_theme.dart';
 import 'package:footy_shorts/utils/themes/light_theme.dart';
+import 'package:get/get.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -21,10 +22,11 @@ class Main extends StatelessWidget {
       dark: darkTheme,
       light: lightTheme,
       builder: (ThemeData light, ThemeData dark) {
-        return MaterialApp(
+        return GetMaterialApp(
           theme: light,
           darkTheme: dark,
           debugShowCheckedModeBanner: false,
+          home: Hom,
         );
       },
     );
